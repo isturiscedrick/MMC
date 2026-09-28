@@ -10,11 +10,16 @@ import {
 export default function Home() {
   return (
     <div id="top" className="bg-ink text-white">
+      <a href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:font-medium focus:text-white"
+      >
+        Skip to content
+      </a>
       <Nav />
 
-      <main>
+      <main id="main">
         {/* Hero */}
-        <section className="relative overflow-hidden px-6 pb-24 pt-20 sm:pt-28">
+        <section id="hero" className="relative overflow-hidden px-6 pb-24 pt-20 sm:pt-28">
           <div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-accent/30 blur-3xl" />
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
             <div>
@@ -24,8 +29,8 @@ export default function Home() {
                 {company.name} helps clients across the country and around the world manufacture their brands and products, and keep their systems at their best.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#contact" className="rounded-full bg-brand px-6 py-3 font-medium text-white hover:opacity-90">Contact us</a>
-                <a href="#about" className="rounded-full border border-white/25 px-6 py-3 font-medium hover:bg-white/10">Learn more</a>
+                <a href="#contact" className="rounded-full bg-brand px-6 py-3 font-medium text-white transition hover:opacity-90">Contact us</a>
+                <a href="#about" className="rounded-full border border-white/25 px-6 py-3 font-medium transition hover:bg-white/10">Learn more</a>
               </div>
             </div>
             <div className="flex justify-center">
@@ -41,7 +46,7 @@ export default function Home() {
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-panel p-5">
                 <dt className="text-3xl font-semibold text-brand">{n}</dt>
-               <dd className="mono-label mt-1 !text-[0.7rem] text-zinc-300">{l}</dd>
+                <dd className="mono-label mt-1 !text-[0.7rem] text-zinc-300">{l}</dd>
               </div>
             ))}
           </dl>
@@ -188,7 +193,7 @@ export default function Home() {
                 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l.address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 text-sm font-medium text-accent hover:text-brand"
+                  className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-accent hover:text-brand"
                 >
                   Open in Maps &rarr;
                 </a>
@@ -196,10 +201,17 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 rounded-2xl border border-white/10 p-6">
-            <h3 className="font-semibold">Contact us</h3>
-            <ul className="mt-3 space-y-1 text-zinc-300">
+            <h3 className="font-semibold">Email us</h3>
+            <p className="mt-1 text-sm text-zinc-400">Tap an address to open your email app.</p>
+            <ul className="mt-4 flex flex-wrap gap-3">
               {company.emails.map((e) => (
-                <li key={e}><a href={`mailto:${e}`} className="hover:text-brand">{e}</a></li>
+                <li key={e}>
+                  <a href={`mailto:${e}`}
+                    className="inline-flex min-h-11 items-center rounded-full border border-white/20 px-5 text-zinc-200 transition-colors hover:border-brand hover:text-brand"
+                  >
+                    {e}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -207,7 +219,7 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-zinc-400">
-        © 2025 {company.name}. {company.tagline}.
+        © {new Date().getFullYear()} {company.name}. {company.tagline}.
       </footer>
     </div>
   );

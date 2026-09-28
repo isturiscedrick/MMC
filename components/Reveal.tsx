@@ -15,6 +15,10 @@ export function Reveal({ children, className = "" }: { children: React.ReactNode
     ) {
       return;
     }
+    // Already on screen at load: leave it visible so it doesn't flash out and back in
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      return;
+    }
 
     el.dataset.reveal = "hidden";
     const io = new IntersectionObserver(
