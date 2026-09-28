@@ -1,0 +1,26 @@
+export type Client = { name: string; src: string; w: number; h: number };
+
+export const clients: Client[] = [
+  { name: "Unilever", src: "/images/clients/unilever.jpg", w: 300, h: 321 },
+  { name: "Maynilad", src: "/images/clients/maynilad.jpg", w: 300, h: 149 },
+  { name: "Pepsi", src: "/images/clients/pepsi.jpg", w: 300, h: 115 },
+  { name: "Convenience Distribution Inc.", src: "/images/clients/cdi.jpg", w: 300, h: 183 },
+  { name: "7-Eleven", src: "/images/clients/seven-eleven.jpg", w: 300, h: 291 },
+  { name: "Nissan", src: "/images/clients/nissan.jpg", w: 300, h: 214 },
+  { name: "Lamitek Systems Inc.", src: "/images/clients/lamitek.jpg", w: 300, h: 43 },
+  { name: "Megaworld", src: "/images/clients/megaworld.jpg", w: 300, h: 214 },
+  { name: "PLDT \u00b7 Smart", src: "/images/clients/pldt-smart.jpg", w: 300, h: 95 },
+  { name: "Jollibee", src: "/images/clients/jollibee.jpg", w: 300, h: 254 },
+  { name: "KFC", src: "/images/clients/kfc.jpg", w: 300, h: 267 },
+  { name: "Pure Foods", src: "/images/clients/purefoods.jpg", w: 300, h: 129 },
+  { name: "Motolite", src: "/images/clients/motolite.jpg", w: 300, h: 80 },
+  { name: "Ramcar", src: "/images/clients/ramcar.jpg", w: 300, h: 67 },
+  { name: "Kenny Rogers Roasters", src: "/images/clients/kenny-rogers.jpg", w: 300, h: 152 },
+  { name: "Ortigas & Company", src: "/images/clients/ortigas.jpg", w: 214, h: 95 },
+  { name: "UnionBank", src: "/images/clients/unionbank.jpg", w: 300, h: 91 },
+  { name: "Pioneer Adhesives", src: "/images/clients/pioneer.jpg", w: 300, h: 45 },
+  { name: "Petron", src: "/images/clients/petron.jpg", w: 300, h: 69 },
+  { name: "CuroTeknika", src: "/images/clients/curotekna.jpg", w: 300, h: 94 },
+  { name: "Army Navy", src: "/images/clients/army-navy.jpg", w: 300, h: 235 },
+  { name: "RM Chemicals", src: "/images/clients/rm-chemicals.jpg", w: 245, h: 172 },
+];

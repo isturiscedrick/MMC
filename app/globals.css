@@ -12,6 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* MMC brand tokens */
+@theme {
+  --color-brand: #f26a21;
+  --color-ink: #0c0c24;
+  --color-panel: #1c1c3d;
+  --color-accent: #8b8bff;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
