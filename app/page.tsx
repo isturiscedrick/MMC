@@ -182,9 +182,16 @@ export default function Home() {
         <Section id="contact" eyebrow="Strategic locations" title="Find us">
           <div className="grid gap-5 md:grid-cols-3">
             {locations.map((l) => (
-              <div key={l.label} className="rounded-2xl bg-panel p-6">
+              <div key={l.label} className="flex flex-col rounded-2xl bg-panel p-6">
                 <h3 className="font-semibold text-brand">{l.label}</h3>
-                <p className="mt-2 leading-7 text-zinc-300">{l.address}</p>
+                <p className="mt-2 flex-1 leading-7 text-zinc-300">{l.address}</p>
+                <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 text-sm font-medium text-accent hover:text-brand"
+                >
+                  Open in Maps &rarr;
+                </a>
               </div>
             ))}
           </div>
