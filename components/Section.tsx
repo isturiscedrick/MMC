@@ -1,11 +1,13 @@
+import { Reveal } from "./Reveal";
+
 export function Section({ id, eyebrow, title, children, className = "" }: { id: string; eyebrow: string; title: string; children: React.ReactNode; className?: string }) {
   return (
     <section id={id} className={`scroll-mt-20 px-6 py-20 ${className}`}>
-      <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">{eyebrow}</p>
+      <Reveal className="mx-auto max-w-6xl">
+        <p className="mono-label text-brand">{eyebrow}</p>
         <h2 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
         <div className="mt-10">{children}</div>
-      </div>
+      </Reveal>
     </section>
   );
 }

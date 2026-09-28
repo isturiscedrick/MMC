@@ -42,7 +42,7 @@ export function Nav() {
           MMC
         </a>
         <nav aria-label="Primary" className="hidden gap-6 text-sm text-zinc-300 md:flex">
-          {links.map(([l, h]) => (
+          {links.filter(([, h]) => h !== "#contact").map(([l, h]) => (
             <a key={h} href={h}
               aria-current={active === h ? "true" : undefined}
               className={`transition-colors hover:text-brand ${active === h ? "text-brand" : ""}`}
@@ -51,6 +51,11 @@ export function Nav() {
             </a>
           ))}
         </nav>
+        
+          href="#contact"
+          className="mono-label hidden rounded-full bg-brand px-5 py-2 text-white transition hover:-translate-y-0.5 hover:opacity-90 md:inline-flex"
+        
+          Contact us
         <details
           className="relative md:hidden"
           open={open}

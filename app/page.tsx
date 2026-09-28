@@ -41,7 +41,7 @@ export default function Home() {
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-panel p-5">
                 <dt className="text-3xl font-semibold text-brand">{n}</dt>
-                <dd className="mt-1 text-sm text-zinc-300">{l}</dd>
+               <dd className="mono-label mt-1 !text-[0.7rem] text-zinc-300">{l}</dd>
               </div>
             ))}
           </dl>
