@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div id="top" className="bg-ink text-white">
       <a href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:font-medium focus:text-white"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:font-medium focus:text-white"
       >
         Skip to content
       </a>
@@ -20,7 +20,7 @@ export default function Home() {
       <main id="main">
         {/* Hero */}
         <section id="hero" className="relative overflow-hidden px-6 pb-24 pt-20 sm:pt-28">
-          <div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-accent/30 blur-3xl" />
+          <div className="pointer-events-none absolute -right-40 -top-40 h-128 w-lg rounded-full bg-accent/30 blur-3xl" />
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Company Profile 2025</p>
@@ -46,7 +46,7 @@ export default function Home() {
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-panel p-5">
                 <dt className="text-3xl font-semibold text-brand">{n}</dt>
-                <dd className="mono-label mt-1 !text-[0.7rem] text-zinc-300">{l}</dd>
+                <dd className="mono-label mt-1 text-[0.7rem]! text-zinc-300">{l}</dd>
               </div>
             ))}
           </dl>
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((p) => (
               <figure key={p.name} className="overflow-hidden rounded-2xl bg-panel">
-                <Image src={`/images/team/${p.photo}.jpg`} alt={p.name} width={420} height={420} className="aspect-[4/3] w-full object-cover object-top" />
+                <Image src={`/images/team/${p.photo}.jpg`} alt={p.name} width={420} height={420} className="aspect-4/3 w-full object-cover object-top" />
                 <figcaption className="p-5">
                   <p className="font-semibold">{p.name}</p>
                   <p className="text-sm text-brand">{p.role}</p>
