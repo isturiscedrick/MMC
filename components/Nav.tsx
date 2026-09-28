@@ -51,11 +51,12 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        
+        <a
           href="#contact"
           className="mono-label hidden rounded-full bg-brand px-5 py-2 text-white transition hover:-translate-y-0.5 hover:opacity-90 md:inline-flex"
-        
+        >
           Contact us
+        </a>
         <details
           className="relative md:hidden"
           open={open}
