@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Nav } from "@/components/Nav";
 import { Section, CheckList } from "@/components/Section";
-import { clients } from "@/lib/clients";
 import {
   company, systems, groupAffiliation, team, core, industries, workforce,
   edge, leverage, employeeBenefits, recruitment, locations,
@@ -37,12 +36,11 @@ export default function Home() {
               <Image src="/images/logo.png" alt="Megatekton" width={420} height={306} priority className="w-72 sm:w-96" />
             </div>
           </div>
-          <dl className="relative mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-4 md:grid-cols-4">
+          <dl className="relative mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-4 md:grid-cols-3">
             {[
               ["1986", "JRS Group of Companies established"],
               [String(systems.length), "Integrated systems"],
               [String(industries.length), "Industries served"],
-              [String(clients.length), "Client brands"],
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-panel p-5">
                 <dt className="text-3xl font-semibold text-brand">{n}</dt>
@@ -155,17 +153,6 @@ export default function Home() {
             <CheckList items={employeeBenefits} />
           </div>
         </section>
-
-        {/* Clients */}
-        <Section id="clients" eyebrow="Our clients" title="Trusted by leading brands">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {clients.map((c) => (
-              <div key={c.name} className="flex h-28 items-center justify-center rounded-2xl bg-white p-4">
-                <Image src={c.src} alt={c.name} width={c.w} height={c.h} className="max-h-full w-auto object-contain" />
-              </div>
-            ))}
-          </div>
-        </Section>
 
         {/* Careers */}
         <Section id="careers" eyebrow="Recruitment & talent management" title="From new vacancy to deployment" className="bg-panel/40">
