@@ -24,7 +24,7 @@ export const groupAffiliation = affiliations.join(" · ");
 
 export const team = [
   { name: "Aniceto Apollo Cajigal Jr.", role: "Chairman & CEO", photo: "aniceto", affiliations },
-  { name: "Rodulfo Malaca", role: "President", photo: "rodulfo", affiliations },
+  { name: "Joy Catherine P. Lopez", role: "President for Operations - MWFL", photo: "joy", affiliations },
   { name: "Jelle Jasmin Manuel", role: "Chief Operating Officer", photo: "jelle", affiliations },
   { name: "Edgardo Flores Jr", role: "Chief Legal Officer", photo: "edgardo", affiliations },
   { name: "Gretchen Alafriz", role: "Chief Financial Officer", photo: "gretchen", affiliations },
