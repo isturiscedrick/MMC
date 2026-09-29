@@ -16,8 +16,7 @@ export function CheckList({ items, cols = "" }: { items: string[]; cols?: string
   return (
     <ul className={`grid gap-3 ${cols}`}>
       {items.map((t) => (
-        <li key={t} className="flex gap-3 rounded-xl bg-panel px-4 py-3 text-zinc-200">
-          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand" />
+        <li key={t} className="flex gap-3 rounded-xl bg-panel px-4 py-3 text-secondary">          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand" />
           {t}
         </li>
       ))}

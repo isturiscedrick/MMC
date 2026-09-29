@@ -57,13 +57,13 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-ink/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <a href="#top" className="flex items-center gap-3 font-semibold">
           <Image src="/images/logo.png" alt="" width={44} height={32} className="h-8 w-auto" />
           MMC
         </a>
-        <nav aria-label="Primary" className="hidden gap-6 text-sm text-zinc-300 md:flex">
+        <nav aria-label="Primary" className="hidden gap-6 text-sm text-secondary md:flex">
           {links.filter(([, h]) => h !== "#contact").map(([l, h]) => (
             <a key={h} href={h}
               aria-current={active === h ? "true" : undefined}
@@ -85,7 +85,7 @@ export function Nav() {
           open={open}
           onToggle={(e) => setOpen(e.currentTarget.open)}
         >
-          <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-lg border border-white/20 px-4 text-sm hover:bg-white/10">
+          <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-lg border border-black/20 px-4 text-sm hover:bg-black/5">
             Menu
           </summary>
           <nav aria-label="Mobile" className="absolute right-0 mt-2 flex w-52 flex-col gap-1 rounded-xl bg-panel p-2 text-sm shadow-xl">
@@ -93,7 +93,7 @@ export function Nav() {
               <a key={h} href={h}
                 onClick={() => setOpen(false)}
                 aria-current={active === h ? "true" : undefined}
-                className={`flex min-h-11 items-center rounded-lg px-3 hover:bg-white/10 ${active === h ? "text-brand" : ""}`}
+                className={`flex min-h-11 items-center rounded-lg px-3 hover:bg-black/5 ${active === h ? "text-brand" : ""}`}
               >
                 {l}
               </a>

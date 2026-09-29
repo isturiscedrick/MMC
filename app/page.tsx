@@ -8,7 +8,7 @@ import {
 
 export default function Home() {
   return (
-    <div id="top" className="bg-ink text-white">
+    <div id="top" className="bg-ink text-black">
       <a href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:font-medium focus:text-white"
       >
@@ -19,17 +19,17 @@ export default function Home() {
       <main id="main">
         {/* Hero */}
         <section id="hero" className="relative overflow-hidden px-6 pb-24 pt-20 sm:pt-28">
-          <div className="pointer-events-none absolute -right-40 -top-40 h-128 w-lg rounded-full bg-accent/30 blur-3xl" />
+          <div className="pointer-events-none absolute -right-40 -top-40 h-128 w-lg rounded-full bg-brand/20 blur-3xl" />
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Company Profile 2025</p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">{company.tagline}.</h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
+              <p className="mt-6 max-w-xl text-lg leading-8 text-secondary">
                 {company.name} helps clients across the country and around the world manufacture their brands and products, and keep their systems at their best.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="#contact" className="rounded-full bg-brand px-6 py-3 font-medium text-white transition hover:opacity-90">Contact us</a>
-                <a href="#about" className="rounded-full border border-white/25 px-6 py-3 font-medium transition hover:bg-white/10">Learn more</a>
+                <a href="#about" className="rounded-full border border-black/25 px-6 py-3 font-medium transition hover:bg-black/5">Learn more</a>
               </div>
             </div>
             <div className="flex justify-center">
@@ -44,7 +44,7 @@ export default function Home() {
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl bg-panel p-5">
                 <dt className="text-3xl font-semibold text-brand">{n}</dt>
-                <dd className="mono-label mt-1 text-[0.7rem]! text-zinc-300">{l}</dd>
+                <dd className="mono-label mt-1 text-[0.7rem]! text-secondary">{l}</dd>
               </div>
             ))}
           </dl>
@@ -53,7 +53,7 @@ export default function Home() {
         {/* About */}
         <Section id="about" eyebrow="Get to know us" title="Part of the manufacturing and warehousing industry since 1986">
           <div className="grid gap-10 md:grid-cols-2">
-            <div className="space-y-5 leading-8 text-zinc-300">
+            <div className="space-y-5 leading-8 text-secondary">
               <p>
                 Megatekton Manufacturing Corp. is engaged in manufacturing and other services, where clients across the country experience innovative services that help international clients manufacture their brands and products and maintain their systems at an optimum level.
               </p>
@@ -73,7 +73,7 @@ export default function Home() {
           <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {systems.map((s, i) => (
               <div key={s} className="rounded-2xl bg-panel p-5">
-                <span className="text-sm font-semibold text-accent">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-sm font-semibold text-brand">{String(i + 1).padStart(2, "0")}</span>
                 <p className="mt-2 font-medium">{s}</p>
               </div>
             ))}
@@ -81,12 +81,12 @@ export default function Home() {
         </Section>
 
         {/* Core */}
-        <Section id="core" eyebrow="Our core" title="Competitive and progressively innovating" className="bg-panel/40">
+        <Section id="core" eyebrow="Our core" title="Competitive and progressively innovating" className="bg-accent">
           <div className="grid gap-5 md:grid-cols-3">
             {core.map((c) => (
-              <div key={c.label} className="rounded-2xl border border-white/10 bg-ink p-6">
+              <div key={c.label} className="rounded-2xl border border-black/10 bg-ink p-6">
                 <h3 className="text-lg font-semibold text-brand">{c.label}</h3>
-                <p className="mt-3 leading-7 text-zinc-300">{c.text}</p>
+                <p className="mt-3 leading-7 text-secondary">{c.text}</p>
               </div>
             ))}
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((p) => (
               <figure key={p.name} className="overflow-hidden rounded-2xl bg-panel">
-                <Image src={`/images/team/${p.photo}.jpg`} alt={p.name} width={420} height={420} className="aspect-4/3 w-full object-cover object-top" />
+                <Image src={`/images/team/${p.photo}.jpg`} alt={p.name} width={420} height={525} sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw" className="aspect-4/5 w-full object-cover object-[50%_20%]" />
                 <figcaption className="p-5">
                   <p className="font-semibold">{p.name}</p>
                   <p className="text-sm text-brand">{p.role}</p>
@@ -105,11 +105,11 @@ export default function Home() {
               </figure>
             ))}
           </div>
-          <p className="mt-6 text-sm text-zinc-400">{groupAffiliation}</p>
+          <p className="mt-6 text-sm text-secondary">{groupAffiliation}</p>
         </Section>
 
         {/* Industries + workforce */}
-        <Section id="industries" eyebrow="Industries" title="We are present in the following industries" className="bg-panel/40">
+        <Section id="industries" eyebrow="Industries" title="We are present in the following industries" className="bg-accent">
           <CheckList items={industries} cols="sm:grid-cols-2 lg:grid-cols-4" />
           <h3 className="mt-14 text-xl font-semibold">We are not limited to blue collars — we are also white collar</h3>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
@@ -124,7 +124,7 @@ export default function Home() {
             <div className="space-y-4">
               {edge.map((e, i) => (
                 <div key={e} className="flex items-center gap-4 rounded-2xl bg-panel p-5">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand font-semibold">{i + 1}</span>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand font-semibold text-white">{i + 1}</span>
                   <p className="font-medium">{e}</p>
                 </div>
               ))}
@@ -132,7 +132,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-xl font-semibold">Leverage</h3>
-              <p className="mt-2 text-zinc-300">We cater to multi-national companies through continuous development of our trainings and competencies.</p>
+              <p className="mt-2 text-secondary">We cater to multi-national companies through continuous development of our trainings and competencies.</p>
               <div className="mt-5"><CheckList items={leverage} /></div>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Home() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Employee benefits</p>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Real-time compensation and benefits</h2>
-              <p className="mt-4 leading-8 text-zinc-300">
+              <p className="mt-4 leading-8 text-secondary">
                 Giving employees real-time compensation and benefits lets them meet their basic needs, especially in emergency cases.
               </p>
               <Image src="/images/forklift.jpg" alt="Forklift in a warehouse" width={800} height={824} className="mt-6 hidden h-56 w-full rounded-2xl object-cover md:block" />
@@ -155,16 +155,16 @@ export default function Home() {
         </section>
 
         {/* Careers */}
-        <Section id="careers" eyebrow="Recruitment & talent management" title="From new vacancy to deployment" className="bg-panel/40">
+        <Section id="careers" eyebrow="Recruitment & talent management" title="From new vacancy to deployment" className="bg-accent">
           <ol className="grid gap-5 md:grid-cols-4">
             {recruitment.map((r) => (
-              <li key={r.n} className="rounded-2xl border border-white/10 bg-ink p-6">
+              <li key={r.n} className="rounded-2xl border border-black/10 bg-ink p-6">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand font-semibold">{r.n}</span>
-                  <span className="rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent">{r.days}</span>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand font-semibold text-white">{r.n}</span>
+                  <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-medium text-brand">{r.days}</span>
                 </div>
                 <h3 className="mt-4 font-semibold">{r.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-300">{r.text}</p>
+                <p className="mt-2 text-sm leading-6 text-secondary">{r.text}</p>
               </li>
             ))}
           </ol>
@@ -176,25 +176,25 @@ export default function Home() {
             {locations.map((l) => (
               <div key={l.label} className="flex flex-col rounded-2xl bg-panel p-6">
                 <h3 className="font-semibold text-brand">{l.label}</h3>
-                <p className="mt-2 flex-1 leading-7 text-zinc-300">{l.address}</p>
+                <p className="mt-2 flex-1 leading-7 text-secondary">{l.address}</p>
                 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l.address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-accent hover:text-brand"
+                  className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-brand hover:text-secondary"
                 >
                   Open in Maps &rarr;
                 </a>
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-2xl border border-white/10 p-6">
+          <div className="mt-8 rounded-2xl border border-black/10 p-6">
             <h3 className="font-semibold">Email us</h3>
-            <p className="mt-1 text-sm text-zinc-400">Tap an address to open your email app.</p>
+            <p className="mt-1 text-sm text-secondary">Tap an address to open your email app.</p>
             <ul className="mt-4 flex flex-wrap gap-3">
               {company.emails.map((e) => (
                 <li key={e}>
                   <a href={`mailto:${e}`}
-                    className="inline-flex min-h-11 items-center rounded-full border border-white/20 px-5 text-zinc-200 transition-colors hover:border-brand hover:text-brand"
+                    className="inline-flex min-h-11 items-center rounded-full border border-black/20 px-5 text-secondary transition-colors hover:border-brand hover:text-brand"
                   >
                     {e}
                   </a>
@@ -205,7 +205,7 @@ export default function Home() {
         </Section>
       </main>
 
-      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-zinc-400">
+      <footer className="border-t border-black/10 px-6 py-8 text-center text-sm text-secondary">
         © {new Date().getFullYear()} {company.name}. {company.tagline}.
       </footer>
     </div>

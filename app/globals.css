@@ -14,10 +14,11 @@
 
 /* MMC brand tokens */
 @theme {
-  --color-brand: #f26a21;
-  --color-ink: #0c0c24;
-  --color-panel: #1c1c3d;
-  --color-accent: #8b8bff;
+  --color-brand: #f06020;
+  --color-ink: #ffffff;
+  --color-panel: #f1f1f1;
+  --color-accent: #f8f8f8;
+  --color-secondary: #404040;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,12 +29,12 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   background: var(--color-ink);
-  color: #ffffff;
+  color: #000000;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
