@@ -14,16 +14,21 @@ export const systems = [
   "Compensation & Benefits System",
 ];
 
-export const groupAffiliation =
-  "Excel Quality Integrated Solutions Inc · Tektonix Manufacturing · Megatekton Manufacturing Corp.";
+const affiliations = [
+  "Excel Quality Integrated Solutions Inc",
+  "Tektonix Manufacturing",
+  "Megatekton Manufacturing Corp.",
+];
+
+export const groupAffiliation = affiliations.join(" · ");
 
 export const team = [
-  { name: "Aniceto Apollo Cajigal Jr.", role: "Chairman & CEO", photo: "aniceto" },
-  { name: "Rodulfo Malaca", role: "President", photo: "rodulfo" },
-  { name: "Jelle Jasmin Manuel", role: "Chief Operating Officer", photo: "jelle" },
-  { name: "Edgardo Flores Jr", role: "Chief Legal Officer", photo: "edgardo" },
-  { name: "Gretchen Alafriz", role: "Chief Financial Officer", photo: "gretchen" },
-  { name: "Gigy Josephine Tugas", role: "Chief HR Officer", photo: "gigy" },
+  { name: "Aniceto Apollo Cajigal Jr.", role: "Chairman & CEO", photo: "aniceto", affiliations },
+  { name: "Rodulfo Malaca", role: "President", photo: "rodulfo", affiliations },
+  { name: "Jelle Jasmin Manuel", role: "Chief Operating Officer", photo: "jelle", affiliations },
+  { name: "Edgardo Flores Jr", role: "Chief Legal Officer", photo: "edgardo", affiliations },
+  { name: "Gretchen Alafriz", role: "Chief Financial Officer", photo: "gretchen", affiliations },
+  { name: "Gigy Josephine Tugas", role: "Chief HR Officer", photo: "gigy", affiliations },
 ];
 
 export const core = [
